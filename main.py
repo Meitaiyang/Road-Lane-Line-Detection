@@ -154,6 +154,15 @@ def getfaster(path,folder):
     cv2.imwrite(folder+'/resault_img3.PNG',resault)
     cv2.imwrite(folder+'/Gray.PNG',img_gray)
 
+    cv2.imshow('/resault_img1.PNG',img_gauss.astype(np.uint8))
+    cv2.imshow('/es.PNG',es.astype(np.uint8))
+    cv2.imshow('/img_canny.PNG',img_canny.astype(np.uint8))
+    cv2.imshow('/tryCanny.PNG',img_th.astype(np.uint8))
+    cv2.imshow('/resault_img3.PNG',resault)
+    cv2.imshow('/Gray.PNG',img_gray)
+
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 if __name__ == '__main__':
     

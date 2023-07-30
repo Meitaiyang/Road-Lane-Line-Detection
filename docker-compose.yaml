@@ -1,0 +1,14 @@
+version: '3'
+services:
+  road-line:
+    image: python:3.10-slim
+    build: .
+    container_name: road-line
+    volumes:
+      - /home/meitaiyang/Desktop/Road-Lane-Line-Detection:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=unix$DISPLAY
+    command: python main.py
+    stdin_open: true
+    tty: true
